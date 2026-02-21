@@ -5,51 +5,401 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ Penghapusan Akun - O'Waste</title>
+    <meta name="description"
+        content="Panduan lengkap cara menghapus akun O'Waste. Ketahui langkah-langkah hapus akun, dampak penghapusan pada poin dan riwayat transaksi, serta opsi pembatalan.">
+    <meta name="keywords"
+        content="hapus akun owaste, penghapusan akun owaste, FAQ owaste, delete account owaste, owaste sampah">
+    <meta name="author" content="O'Waste">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tnc.owaste.cloud/faq/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tnc.owaste.cloud/faq/">
+    <meta property="og:title" content="FAQ Penghapusan Akun - O'Waste">
+    <meta property="og:description"
+        content="Panduan lengkap cara menghapus akun O'Waste. Semua poin dan riwayat transaksi akan terhapus secara permanen.">
+    <meta property="og:site_name" content="O'Waste">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FAQ Penghapusan Akun - O'Waste">
+    <meta name="twitter:description"
+        content="Panduan lengkap cara menghapus akun O'Waste. Semua poin dan riwayat transaksi akan terhapus secara permanen.">
+
+    <!-- FAQ Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara menghapus akun saya di O'Waste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buka aplikasi O'Waste, pergi ke Pengaturan, pilih Akun, lalu pilih Hapus Akun dan ikuti instruksi yang muncul. Proses penghapusan permanen akan memakan waktu hingga 30 hari."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah data saya benar-benar dihapus setelah akun dihapus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, semua data pribadi, riwayat penyerahan sampah, dan poin Anda akan dihapus secara permanen dari server kami setelah proses penghapusan selesai."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah saya bisa membatalkan penghapusan akun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anda bisa membatalkan penghapusan akun selama proses belum selesai (dalam 30 hari). Setelah lebih dari 30 hari, data tidak dapat dipulihkan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah saya perlu menghubungi tim dukungan untuk menghapus akun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak. Anda dapat menghapus akun Anda sendiri melalui aplikasi. Jika mengalami kendala, silakan hubungi kami di contact@owaste.id."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah poin saya akan hilang saat akun dihapus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, semua poin dan hadiah terkait akan dihapus secara permanen saat akun Anda dihapus."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
+        /* ══ Base ══════════════════════════════════════════ */
+        :root {
+            --green-primary: #2e7d32;
+            --green-mid: #388e3c;
+            --green-light: #e8f5e9;
+            --green-border: #c8e6c9;
+            --red-primary: #c62828;
+            --red-mid: #d32f2f;
+            --red-light: #ffebee;
+            --red-border: #ffcdd2;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a4a4a;
+            --text-muted: #777;
+            --border-light: #e5e7eb;
+            --bg-page: #f5f7f5;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.09);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.13);
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: 0.28s ease;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            padding-top: 20px;
-            padding-bottom: 50px;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding-bottom: 60px;
         }
 
-        .faq-item {
-            margin-bottom: 15px;
+        /* ══ Header / Hero ══════════════════════════════════ */
+        .page-header {
+            background: linear-gradient(135deg, var(--green-primary) 0%, #1b5e20 100%);
+            padding: 52px 24px 44px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .faq-item img {
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .page-header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.1rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        .page-header .subtitle {
+            font-size: 0.97rem;
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 480px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .badge-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 4px 14px;
+            border-radius: 99px;
+            margin-bottom: 16px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ══ Main content ══════════════════════════════════ */
+        .main-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 16px 0;
+        }
+
+        /* ══ Section label ════════════════════════════════ */
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--green-primary);
+            margin-bottom: 14px;
+        }
+
+        /* ══ Accordion ════════════════════════════════════ */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .faq-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .faq-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--green-border);
+        }
+
+        .faq-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .faq-trigger:hover {
+            background: #fafffe;
+        }
+
+        .faq-trigger.open {
+            color: var(--green-primary);
+            background: var(--green-light);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--green-light);
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .faq-trigger.open .faq-icon {
+            background: var(--green-primary);
+            transform: rotate(45deg);
+        }
+
+        .faq-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--green-primary);
+            transition: stroke var(--transition);
+        }
+
+        .faq-trigger.open .faq-icon svg {
+            stroke: #fff;
+        }
+
+        .faq-body {
+            display: none;
+            padding: 0 20px 20px;
+            font-size: 0.93rem;
+            color: var(--text-mid);
+            border-top: 1px solid var(--border-light);
+        }
+
+        .faq-body.open {
+            display: block;
+        }
+
+        .faq-body p:first-child {
+            margin-top: 16px;
+        }
+
+        .faq-body ol {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .faq-body ol li {
+            margin-bottom: 22px;
+            font-size: 0.92rem;
+        }
+
+        .faq-body img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-            margin-bottom: 10px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            margin-top: 12px;
+            display: block;
         }
 
-        .faq-item ol li {
-            margin-bottom: 20px;
-        }
-
+        /* ══ Delete section ════════════════════════════════ */
         .delete-section {
-            background: #fff5f5;
-            border: 1px solid #f5c6cb;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
+            margin-top: 36px;
+            background: var(--white);
+            border: 1px solid var(--red-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: 32px 28px;
             text-align: center;
         }
 
+        .delete-icon-wrap {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--red-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+        }
+
+        .delete-section h5 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--red-primary);
+            margin-bottom: 8px;
+        }
+
+        .delete-section p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .btn-delete-main {
+            background: var(--red-mid);
+            color: #fff;
+            border: none;
+            padding: 11px 30px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.93rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: 0 2px 8px rgba(211, 47, 47, 0.25);
+        }
+
+        .btn-delete-main:hover {
+            background: var(--red-primary);
+            box-shadow: 0 4px 16px rgba(198, 40, 40, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .btn-delete-main:active {
+            transform: translateY(0);
+        }
+
+        /* ══ Footer ════════════════════════════════════════ */
+        .page-footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ══ Modal overlay ═════════════════════════════════ */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9999;
+            inset: 0;
+            background: rgba(15, 20, 15, 0.5);
+            z-index: 9000;
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            padding: 16px;
         }
 
         .modal-overlay.active {
@@ -57,229 +407,451 @@
         }
 
         .modal-box {
-            background: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 420px;
-            width: 90%;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px 28px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            animation: modalIn 0.28s cubic-bezier(0.34, 1.36, 0.64, 1) both;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.92) translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .modal-icon.green {
+            background: var(--green-light);
+        }
+
+        .modal-icon.red {
+            background: var(--red-light);
         }
 
         .modal-box h5 {
-            margin-bottom: 18px;
-            font-weight: 600;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text-dark);
         }
 
-        .warning-box {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
+        .modal-box .modal-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Form */
+        .form-label-custom {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-mid);
+            margin-bottom: 5px;
+        }
+
+        .input-custom {
+            width: 100%;
+            border: 1px solid var(--border-light);
             border-radius: 8px;
-            padding: 12px 16px;
+            padding: 10px 13px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            background: #fafafa;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            outline: none;
+            margin-bottom: 14px;
+        }
+
+        .input-custom:focus {
+            border-color: var(--green-mid);
+            box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.12);
+            background: #fff;
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: #fffde7;
+            border: 1px solid #ffe082;
+            border-left: 4px solid #f9a825;
+            border-radius: 8px;
+            padding: 13px 15px;
             margin-bottom: 16px;
-            font-size: 14px;
+            font-size: 0.84rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .warning-box strong {
+            color: #e65100;
         }
 
         .warning-box ul {
-            margin: 6px 0 0 0;
+            margin: 7px 0 0;
             padding-left: 18px;
         }
 
+        .warning-box ul li {
+            margin-bottom: 3px;
+        }
+
+        /* Error alert */
+        .err-alert {
+            background: var(--red-light);
+            border: 1px solid var(--red-border);
+            border-radius: 7px;
+            padding: 9px 13px;
+            font-size: 0.83rem;
+            color: var(--red-primary);
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        /* Modal buttons */
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .btn-cancel {
+            background: #f1f3f1;
+            border: 1px solid var(--border-light);
+            color: var(--text-mid);
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background var(--transition);
+        }
+
+        .btn-cancel:hover {
+            background: #e5e7e5;
+        }
+
+        .btn-primary-green {
+            background: var(--green-mid);
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: 0 2px 8px rgba(46, 125, 50, 0.22);
+        }
+
+        .btn-primary-green:hover {
+            background: var(--green-primary);
+            box-shadow: 0 3px 12px rgba(46, 125, 50, 0.32);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary-green:disabled,
+        .btn-danger-modal:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-danger-modal {
+            background: var(--red-mid);
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: 0 2px 8px rgba(211, 47, 47, 0.22);
+        }
+
+        .btn-danger-modal:hover {
+            background: var(--red-primary);
+            box-shadow: 0 3px 12px rgba(198, 40, 40, 0.32);
+            transform: translateY(-1px);
+        }
+
+        /* Spinner */
+        .spin {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ══ Toast ══════════════════════════════════════════ */
         #toastMsg {
             position: fixed;
-            bottom: 30px;
+            bottom: 28px;
             left: 50%;
-            transform: translateX(-50%);
-            background: #333;
+            transform: translateX(-50%) translateY(20px);
+            background: #1a1a1a;
             color: #fff;
-            padding: 10px 24px;
-            border-radius: 24px;
-            font-size: 14px;
+            padding: 11px 24px;
+            border-radius: 40px;
+            font-size: 0.87rem;
+            font-weight: 500;
             z-index: 99999;
-            display: none;
-            min-width: 220px;
-            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            white-space: nowrap;
         }
 
         #toastMsg.show {
-            display: block;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
 
         #toastMsg.success {
-            background: #198754;
+            background: #2e7d32;
         }
 
         #toastMsg.error {
-            background: #dc3545;
+            background: #c62828;
         }
 
-        .spinner-border-sm {
-            width: 1rem;
-            height: 1rem;
+        /* ══ Scroll-in animation ════════════════════════════ */
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h1 class="text-center mb-4">FAQ Penghapusan Akun O'Waste</h1>
-                <p class="text-center text-muted">
-                    Panduan ini menjelaskan cara menghapus akun Anda dari aplikasi O'Waste.
-                </p>
 
-                <div class="accordion" id="faqAccordion">
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1">
-                                    Bagaimana cara menghapus akun saya di O'Waste?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p>Ikuti langkah-langkah berikut untuk menghapus akun Anda:</p>
-                                    <ol>
-                                        <li>Buka aplikasi O'Waste.<br><img src="1.jpeg"
-                                                alt="Langkah 1: Buka aplikasi O'Waste" class="img-fluid"></li>
-                                        <li>Pergi ke Pengaturan.<br><img src="2.jpeg"
-                                                alt="Langkah 2: Pergi ke Pengaturan" class="img-fluid"></li>
-                                        <li>Pilih Akun.<br><img src="3.jpeg" alt="Langkah 3: Pilih Akun"
-                                                class="img-fluid"></li>
-                                        <li>Pilih Hapus Akun dan ikuti instruksi yang muncul.<br><img src="4.jpeg"
-                                                alt="Langkah 4: Pilih Hapus Akun" class="img-fluid"></li>
-                                    </ol>
-                                    <p>Proses penghapusan permanen akan memakan waktu hingga 30 hari.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2">
-                                    Apakah data saya benar-benar dihapus setelah akun dihapus?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ya, semua data pribadi, riwayat penyerahan sampah, dan poin Anda akan dihapus secara
-                                    permanen dari server kami setelah proses penghapusan selesai. Kami tidak menyimpan
-                                    data Anda setelah akun dihapus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3">
-                                    Apakah saya bisa membatalkan penghapusan akun?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Anda bisa membatalkan penghapusan akun selama proses belum selesai (dalam 30 hari).
-                                    Setelah lebih dari 30 hari, data tidak dapat dipulihkan.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4">
-                                    Apakah saya perlu menghubungi tim dukungan untuk menghapus akun?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Tidak. Anda dapat menghapus akun Anda sendiri melalui aplikasi. Jika mengalami
-                                    kendala, silakan hubungi kami di <a
-                                        href="mailto:contact@owaste.id">contact@owaste.id</a>.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5">
-                                    Apakah poin saya akan hilang saat akun dihapus?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Ya, semua poin dan hadiah terkait akan dihapus secara permanen saat akun Anda
-                                    dihapus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hapus Akun Section -->
-                <div class="delete-section">
-                    <h5 class="text-danger">⚠️ Hapus Akun</h5>
-                    <p class="text-muted mb-3" style="font-size:14px;">
-                        Anda dapat menghapus akun O'Waste Anda secara permanen melalui tombol di bawah ini.
-                    </p>
-                    <button id="btnHapusAkun" class="btn btn-danger px-4" onclick="openLoginModal()">
-                        Hapus Akun Saya
-                    </button>
-                </div>
-
-                <hr class="my-4">
-                <p class="text-center text-muted small">
-                    © 2025 O'Waste. Semua hak dilindungi.
-                </p>
-            </div>
+    <!-- ── Header ──────────────────────────────────────── -->
+    <header class="page-header">
+        <img src="owaste_logo.png" alt="O'Waste Logo"
+            style="height:52px;width:auto;object-fit:contain;margin-bottom:16px;filter:brightness(0) invert(1);display:block;margin-left:auto;margin-right:auto;">
+        <div class="badge-header">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+            </svg>
+            Pusat Bantuan
         </div>
-    </div>
+        <h1>FAQ Penghapusan Akun</h1>
+        <p class="subtitle">Panduan resmi menghapus akun O'Waste beserta dampak yang perlu Anda ketahui.</p>
+    </header>
 
-    <!-- Modal 1: Login -->
+    <!-- ── Main ────────────────────────────────────────── -->
+    <main class="main-wrapper">
+
+        <p class="section-label reveal">Pertanyaan Umum</p>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-accordion">
+
+            <div class="faq-card reveal" style="transition-delay:0.05s">
+                <button class="faq-trigger open" id="faq-btn-1" onclick="toggleFaq(1)">
+                    Bagaimana cara menghapus akun saya di O'Waste?
+                    <span class="faq-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-body open" id="faq-body-1">
+                    <p>Ikuti langkah-langkah berikut untuk menghapus akun Anda:</p>
+                    <ol>
+                        <li>Buka aplikasi O'Waste.<br><img src="1.jpeg" alt="Langkah 1: Buka aplikasi O'Waste"></li>
+                        <li>Pergi ke Pengaturan.<br><img src="2.jpeg" alt="Langkah 2: Pergi ke Pengaturan"></li>
+                        <li>Pilih Akun.<br><img src="3.jpeg" alt="Langkah 3: Pilih Akun"></li>
+                        <li>Pilih <strong>Hapus Akun</strong> dan ikuti instruksi yang muncul.<br><img src="4.jpeg"
+                                alt="Langkah 4: Pilih Hapus Akun"></li>
+                    </ol>
+                    <p>Proses penghapusan permanen akan memakan waktu hingga 30 hari.</p>
+                </div>
+            </div>
+
+            <div class="faq-card reveal" style="transition-delay:0.10s">
+                <button class="faq-trigger" id="faq-btn-2" onclick="toggleFaq(2)">
+                    Apakah data saya benar-benar dihapus setelah akun dihapus?
+                    <span class="faq-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-body" id="faq-body-2">
+                    <p>Ya, semua data pribadi, riwayat penyerahan sampah, dan poin Anda akan dihapus secara permanen
+                        dari server kami setelah proses penghapusan selesai. Kami tidak menyimpan data Anda setelah akun
+                        dihapus.</p>
+                </div>
+            </div>
+
+            <div class="faq-card reveal" style="transition-delay:0.15s">
+                <button class="faq-trigger" id="faq-btn-3" onclick="toggleFaq(3)">
+                    Apakah saya bisa membatalkan penghapusan akun?
+                    <span class="faq-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-body" id="faq-body-3">
+                    <p>Anda bisa membatalkan penghapusan akun selama proses belum selesai (dalam 30 hari). Setelah lebih
+                        dari 30 hari, data tidak dapat dipulihkan.</p>
+                </div>
+            </div>
+
+            <div class="faq-card reveal" style="transition-delay:0.20s">
+                <button class="faq-trigger" id="faq-btn-4" onclick="toggleFaq(4)">
+                    Apakah saya perlu menghubungi tim dukungan untuk menghapus akun?
+                    <span class="faq-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-body" id="faq-body-4">
+                    <p>Tidak. Anda dapat menghapus akun Anda sendiri melalui aplikasi. Jika mengalami kendala, silakan
+                        hubungi kami di <a href="mailto:contact@owaste.id"
+                            style="color:var(--green-primary);font-weight:500;">contact@owaste.id</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-card reveal" style="transition-delay:0.25s">
+                <button class="faq-trigger" id="faq-btn-5" onclick="toggleFaq(5)">
+                    Apakah poin saya akan hilang saat akun dihapus?
+                    <span class="faq-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-body" id="faq-body-5">
+                    <p>Ya, semua poin dan hadiah terkait akan dihapus secara permanen saat akun Anda dihapus.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Delete section -->
+        <div class="delete-section reveal" style="transition-delay:0.30s">
+            <div class="delete-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6" />
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                    <path d="M10 11v6" />
+                    <path d="M14 11v6" />
+                    <path d="M9 6V4h6v2" />
+                </svg>
+            </div>
+            <h5>Hapus Akun</h5>
+            <p>Anda dapat menghapus akun O'Waste Anda secara permanen. Tindakan ini tidak dapat dibatalkan setelah 30
+                hari.</p>
+            <button id="btnHapusAkun" class="btn-delete-main" onclick="openLoginModal()">
+                Hapus Akun Saya
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer reveal" style="transition-delay:0.35s">
+            © 2025 O'Waste. Semua hak dilindungi.
+        </footer>
+
+    </main>
+
+    <!-- ── Modal: Login ──────────────────────────────── -->
     <div class="modal-overlay" id="modalLogin">
         <div class="modal-box">
-            <h5>🔐 Verifikasi Identitas</h5>
-            <p class="text-muted" style="font-size:13px;">Masukkan email dan password akun O'Waste Anda untuk
-                melanjutkan penghapusan akun.</p>
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Email</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="user@email.com"
-                    autocomplete="email">
+            <div class="modal-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
             </div>
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-                    autocomplete="current-password">
-            </div>
-            <div id="loginError" class="alert alert-danger py-2" style="display:none;font-size:13px;"></div>
-            <div class="d-flex gap-2 justify-content-end mt-3">
-                <button class="btn btn-secondary" onclick="closeLoginModal()">Batal</button>
-                <button id="btnLoginSubmit" class="btn btn-danger" onclick="submitLogin()">
-                    <span id="loginSpinner" class="spinner-border spinner-border-sm me-1" style="display:none;"></span>
+            <h5>Verifikasi Identitas</h5>
+            <p class="modal-desc">Masukkan email dan password akun O'Waste Anda untuk melanjutkan.</p>
+
+            <label class="form-label-custom" for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" class="input-custom" placeholder="user@email.com" autocomplete="email">
+
+            <label class="form-label-custom" for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" class="input-custom" placeholder="Password"
+                autocomplete="current-password">
+
+            <div id="loginError" class="err-alert"></div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeLoginModal()">Batal</button>
+                <button id="btnLoginSubmit" class="btn-primary-green" onclick="submitLogin()">
                     Lanjutkan
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2: Konfirmasi Delete -->
+    <!-- ── Modal: Konfirmasi ─────────────────────────── -->
     <div class="modal-overlay" id="modalConfirm">
         <div class="modal-box">
-            <h5 class="text-danger">🗑️ Konfirmasi Penghapusan Akun</h5>
+            <div class="modal-icon red">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+            </div>
+            <h5>Konfirmasi Penghapusan Akun</h5>
+
             <div class="warning-box">
-                <strong>⚠️ Perhatian!</strong> Dengan menghapus akun, seluruh data berikut akan terhapus secara
-                permanen:
+                <strong>Perhatian!</strong> Dengan menghapus akun, seluruh data berikut akan terhapus secara permanen:
                 <ul>
                     <li>Semua poin reward Anda</li>
                     <li>Seluruh riwayat transaksi dan setoran sampah</li>
@@ -287,33 +859,69 @@
                 </ul>
                 <strong>Tindakan ini tidak dapat dibatalkan setelah 30 hari.</strong>
             </div>
-            <p class="text-muted" style="font-size:13px;">Apakah Anda yakin ingin menghapus akun Anda selamanya?</p>
-            <div id="confirmError" class="alert alert-danger py-2" style="display:none;font-size:13px;"></div>
-            <div class="d-flex gap-2 justify-content-end mt-3">
-                <button class="btn btn-secondary" onclick="closeConfirmModal()">Tidak, Batalkan</button>
-                <button id="btnConfirmDelete" class="btn btn-danger" onclick="submitDelete()">
-                    <span id="deleteSpinner" class="spinner-border spinner-border-sm me-1" style="display:none;"></span>
-                    Ya, Hapus Akun Saya
+
+            <p class="modal-desc" style="margin-bottom:0;">Apakah Anda yakin ingin menghapus akun Anda selamanya?</p>
+
+            <div id="confirmError" class="err-alert"></div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeConfirmModal()">Tidak, Batalkan</button>
+                <button id="btnConfirmDelete" class="btn-danger-modal" onclick="submitDelete()">
+                    Ya, Hapus Akun
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Toast -->
+    <!-- ── Toast ─────────────────────────────────────── -->
     <div id="toastMsg"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        /* ── Scroll reveal ──────────────────────────────── */
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            els.forEach(function (el) { obs.observe(el); });
+        })();
+
+        /* ── FAQ Accordion ──────────────────────────────── */
+        function toggleFaq(id) {
+            var btn = document.getElementById('faq-btn-' + id);
+            var body = document.getElementById('faq-body-' + id);
+            var isOpen = btn.classList.contains('open');
+
+            // close all
+            [1, 2, 3, 4, 5].forEach(function (i) {
+                document.getElementById('faq-btn-' + i).classList.remove('open');
+                document.getElementById('faq-body-' + i).classList.remove('open');
+            });
+
+            if (!isOpen) {
+                btn.classList.add('open');
+                body.classList.add('open');
+            }
+        }
+
+        /* ── State ──────────────────────────────────────── */
         var _authToken = null;
         var _userEmail = null;
         var _userPassword = null;
 
-        // ── Modal helpers ──────────────────────────────────────────────
+        /* ── Modal helpers ──────────────────────────────── */
         function openLoginModal() {
             document.getElementById('inputEmail').value = '';
             document.getElementById('inputPassword').value = '';
             document.getElementById('loginError').style.display = 'none';
             document.getElementById('modalLogin').classList.add('active');
+            setTimeout(function () { document.getElementById('inputEmail').focus(); }, 80);
         }
 
         function closeLoginModal() {
@@ -327,20 +935,19 @@
 
         function closeConfirmModal() {
             document.getElementById('modalConfirm').classList.remove('active');
-            _authToken = null;
-            _userEmail = null;
-            _userPassword = null;
+            _authToken = null; _userEmail = null; _userPassword = null;
         }
 
-        // ── Toast ──────────────────────────────────────────────────────
+        /* ── Toast ──────────────────────────────────────── */
         function showToast(msg, type) {
             var el = document.getElementById('toastMsg');
             el.textContent = msg;
             el.className = 'show ' + (type || '');
-            setTimeout(function () { el.className = ''; }, 3500);
+            clearTimeout(el._t);
+            el._t = setTimeout(function () { el.className = ''; }, 3800);
         }
 
-        // ── Step 1: Login ──────────────────────────────────────────────
+        /* ── Step 1: Login ──────────────────────────────── */
         function submitLogin() {
             var email = document.getElementById('inputEmail').value.trim();
             var password = document.getElementById('inputPassword').value;
@@ -353,9 +960,8 @@
             }
 
             var btn = document.getElementById('btnLoginSubmit');
-            var spinner = document.getElementById('loginSpinner');
             btn.disabled = true;
-            spinner.style.display = 'inline-block';
+            btn.innerHTML = '<span class="spin"></span> Memverifikasi...';
             errEl.style.display = 'none';
 
             fetch('https://api.owaste.cloud/api/auth/login', {
@@ -364,13 +970,11 @@
                 body: JSON.stringify({ userIdentifier: email, password: password })
             })
                 .then(function (res) {
-                    return res.json().then(function (data) {
-                        return { status: res.status, data: data };
-                    });
+                    return res.json().then(function (data) { return { status: res.status, data: data }; });
                 })
                 .then(function (result) {
                     btn.disabled = false;
-                    spinner.style.display = 'none';
+                    btn.innerHTML = 'Lanjutkan';
 
                     if (result.status === 200 && result.data.token) {
                         _authToken = result.data.token;
@@ -386,20 +990,18 @@
                 })
                 .catch(function () {
                     btn.disabled = false;
-                    spinner.style.display = 'none';
+                    btn.innerHTML = 'Lanjutkan';
                     errEl.textContent = 'Gagal terhubung ke server. Periksa koneksi internet Anda.';
                     errEl.style.display = 'block';
                 });
         }
 
-        // ── Step 2: Delete Account ─────────────────────────────────────
+        /* ── Step 2: Delete ─────────────────────────────── */
         function submitDelete() {
             var errEl = document.getElementById('confirmError');
             var btn = document.getElementById('btnConfirmDelete');
-            var spinner = document.getElementById('deleteSpinner');
-
             btn.disabled = true;
-            spinner.style.display = 'inline-block';
+            btn.innerHTML = '<span class="spin"></span> Menghapus...';
             errEl.style.display = 'none';
 
             fetch('https://api.owaste.cloud/api/user/account-deletion', {
@@ -411,26 +1013,20 @@
                 body: JSON.stringify({ email: _userEmail, password: _userPassword })
             })
                 .then(function (res) {
-                    return res.json().then(function (data) {
-                        return { status: res.status, data: data };
-                    });
+                    return res.json().then(function (data) { return { status: res.status, data: data }; });
                 })
                 .then(function (result) {
                     btn.disabled = false;
-                    spinner.style.display = 'none';
+                    btn.innerHTML = 'Ya, Hapus Akun';
 
                     if (result.status === 200 || result.status === 201 || result.status === 204) {
-                        // Hapus semua storage
                         localStorage.clear();
                         sessionStorage.clear();
-
-                        // Hapus cookies
                         document.cookie.split(';').forEach(function (c) {
                             document.cookie = c.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';
                         });
-
                         closeConfirmModal();
-                        showToast('✅ Akun berhasil dihapus. Terima kasih telah menggunakan O\'Waste.', 'success');
+                        showToast('✓ Akun berhasil dihapus. Terima kasih telah menggunakan O\'Waste.', 'success');
                     } else {
                         var msg = (result.data && (result.data.message || result.data.error)) || 'Gagal menghapus akun. Silakan coba lagi.';
                         errEl.textContent = msg;
@@ -439,13 +1035,13 @@
                 })
                 .catch(function () {
                     btn.disabled = false;
-                    spinner.style.display = 'none';
+                    btn.innerHTML = 'Ya, Hapus Akun';
                     errEl.textContent = 'Gagal terhubung ke server. Periksa koneksi internet Anda.';
                     errEl.style.display = 'block';
                 });
         }
 
-        // Tutup modal saat klik overlay
+        /* ── Close on overlay click ─────────────────────── */
         document.getElementById('modalLogin').addEventListener('click', function (e) {
             if (e.target === this) closeLoginModal();
         });
@@ -453,7 +1049,7 @@
             if (e.target === this) closeConfirmModal();
         });
 
-        // Enter key di form login
+        /* ── Enter to submit login ──────────────────────── */
         document.getElementById('inputPassword').addEventListener('keydown', function (e) {
             if (e.key === 'Enter') submitLogin();
         });
